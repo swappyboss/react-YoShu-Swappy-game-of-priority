@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Romantic animated pink background */
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(-45deg, #ff9a9e, #fecfef, #fcb69f, #ffdde1);
+  background-size: 400% 400%;
+  animation: bgAnimation 10s ease infinite;
+}
+
+@keyframes bgAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Question */
+.question {
+  margin-bottom: 40px;
+  font-size: 28px;
+  color: #5a0033;
+  text-align: center;
+}
+
+/* Row */
+.options-row {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Buttons */
+.btn {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.1s linear;
+}
+
+/* Correct */
+.correct {
+  background-color: #ff4d6d;
+  color: white;
+  z-index: 2;
+}
+
+/* Wrong */
+.wrong {
+  background-color: #ff4d6d;
+  color: white;
+
+  /* CRITICAL: impossible to click */
+  pointer-events: none;
+}
+
+/* Movement boundary */
+.movement-area {
+  width: 260px;
+  height: 160px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden; /* invisible wall */
+}
