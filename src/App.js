@@ -59,7 +59,7 @@ export default function App() {
   return (
     <div className="app">
       <h1 className="question">
-        What is the highest priority for Bebu?
+        What is the highest priority in the world for Bebu?
       </h1>
 
       <div className="options-row">
